@@ -5,7 +5,7 @@
 export const environment = {
   production: false
 };
-
+const key = "a58fdcc7ef5a4f2c9418bb8e44ecbd2519070a1b";
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
