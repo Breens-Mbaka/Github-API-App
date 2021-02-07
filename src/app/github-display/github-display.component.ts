@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./github-display.component.css']
 })
 export class GithubDisplayComponent implements OnInit {
+       
 
-  constructor() { }
+
+
+  constructor() {}
 
   ngOnInit(): void {
   }
