@@ -8,6 +8,7 @@ import { UsernameDataComponent } from './username-data/username-data.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
     UsernameComponent,
     UserProfileComponent,
     GithubDisplayComponent,
-    UsernameDataComponent
+    UsernameDataComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
