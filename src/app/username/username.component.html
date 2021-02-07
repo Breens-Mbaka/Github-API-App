@@ -1,8 +1,10 @@
-<div class="container">
+<div class="container mt-3">
     <div class="card">
-        <img [src]="userProfile.avatar_url" alt="">
+        <img [src]="userProfile.avatar_url" alt="" class="img_fluid">
         <div class="card-body">
-
+            <h4 class="card-title">{{userProfile.name}}</h4>
+            <p class="card-text">{{userProfile.bio}}</p>
+            <a [href]="userProfile.html_url" target="_blank"class="btn btn-success btn-sm">Github Profile</a>
         </div>
     </div>
 </div>

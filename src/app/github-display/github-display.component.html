@@ -8,7 +8,7 @@
                 <div class="card-body">
                     <form class="form-inline" (submit)="searchUser()">
                         <div class="form-group">
-                            <input name="user" ([ngModel])="userQuery" type="search" class="form-control" placeholder="enter username">
+                            <input  type="search" class="form-control" name="user" [(ngModel)]="userQuery" placeholder="enter username">
                         </div>
                         <div>
                             <input type="submit" value="search" class="btn btn-info">

@@ -7,8 +7,8 @@ import { GithubDisplayComponent } from './github-display/github-display.componen
 import { UsernameDataComponent } from './username-data/username-data.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
 import { ProjectsComponent } from './projects/projects.component';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
