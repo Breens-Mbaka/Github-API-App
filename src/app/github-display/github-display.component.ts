@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchServiceService } from '../search-service.service';
-import { NgxSpinnerModule } from 'ngx-spinner'
+
 @Component({
   selector: 'app-github-display',
   templateUrl: './github-display.component.html',
@@ -9,11 +9,14 @@ import { NgxSpinnerModule } from 'ngx-spinner'
 export class GithubDisplayComponent implements OnInit {
 
   public userQuery!:string;
+  public userQuery2!:string;
   public userProfile:any;
+  public repositories:any;
   public userProjects!:any[];
   public errorMessage!:string;
 
   public searchUser() {
+    //get and display username
     this.searchService.getUsername(this.userQuery)
     .subscribe(
       (data)=>{
@@ -32,10 +35,21 @@ export class GithubDisplayComponent implements OnInit {
         this.errorMessage = error;
       });
   }
+  //Saerch for only repos
+  public searchRepos(){
+    this.searchService.getRepos(this.userQuery2)
+    .subscribe(
+      (data)=>{
+        this.repositories = data;
+      },
+      (error)=>{
+        this.errorMessage = error;
+      });
+  }
+
   
 
-  constructor(private searchService: SearchServiceService,
-    private loading:NgxSpinnerModule) {}
+  constructor(private searchService: SearchServiceService) {}
 
   ngOnInit(): void {
   }

@@ -8,8 +8,8 @@ import { UsernameDataComponent } from './username-data/username-data.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsComponent } from './projects/projects.component';
-import { FormsModule } from '@angular/forms'
-import { NgxSpinnerModule } from 'ngx-spinner'
+import { FormsModule } from '@angular/forms';
+import { ReposComponent } from './repos/repos.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { NgxSpinnerModule } from 'ngx-spinner'
     GithubDisplayComponent,
     UsernameDataComponent,
     ProjectsComponent,
-    NgxSpinnerModule
+    ReposComponent,
   ],
   imports: [
     BrowserModule,

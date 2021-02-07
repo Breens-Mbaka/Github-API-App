@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ProjectsComponent implements OnInit {
 
   @Input() userProjects!:any[];
+
   constructor() { }
 
   ngOnInit(): void {
