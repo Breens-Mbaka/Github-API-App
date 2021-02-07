@@ -1,11 +1,30 @@
-<div class=".card mt-3">
-<div class="card-header">
-    <span class="badge badge-primary mr-3">{{userProfile.followers}} Followers</span>
-    <span class="badge badge-success mr-3">{{userProfile.public_repos}} Repositories</span>
-    <span class="badge badge-warning mr-3">{{userProfile.public_gists}} Gists</span>
-    <span class="badge badge-info mr-3">{{userProfile.following}} Following</span>
+<div class="card mt-3">
+<div class="card-header bg-primary text-white">
+    About {{userProfile.name}}
 </div>
 <div class="card-body">
-
+    <ul class="list-group">
+        <li class="list-group-item">
+            Username: {{userProfile.name}}
+        </li>
+        <li class="list-group-item">
+            Profile Url: {{userProfile.html_url}}
+        </li>
+        <li class="list-group-item">
+            Repositories: {{userProfile.public_repos}}
+        </li>
+        <li class="list-group-item">
+            User's Repositories Url: {{userProfile.repos_url}}
+        </li>
+        <li class="list-group-item">
+            Member since: {{userProfile.created_at | date}}
+        </li>
+        <li class="list-group-item">
+            Followers: {{userProfile.followers}}
+        </li>
+        <li class="list-group-item">
+            Following: {{userProfile.following}}
+        </li>
+    </ul>
 </div>
 </div>
