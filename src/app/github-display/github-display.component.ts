@@ -6,9 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./github-display.component.css']
 })
 export class GithubDisplayComponent implements OnInit {
-       
 
-
+  public userQuery!:string;
 
   constructor() {}
 
