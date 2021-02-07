@@ -5,16 +5,23 @@
 <div class="card-body">
     <ul class="list-group">
         <li class="list-group-item">
-            Username: {{userProfile.name}}
+            Username: 
+            {{userProfile.name}}
         </li>
         <li class="list-group-item">
-            Profile Url: {{userProfile.html_url}}
+            Profile Url:
+            <a [href]="userProfile.html_url" target="_blank">
+                {{userProfile.html_url}}
+            </a>
         </li>
         <li class="list-group-item">
             Repositories: {{userProfile.public_repos}}
         </li>
         <li class="list-group-item">
-            User's Repositories Url: {{userProfile.repos_url}}
+            User's Repositories Url:
+            <a [href]="userProfile.repos_url" target="_blank">
+                {{userProfile.repos_url}}
+            </a>
         </li>
         <li class="list-group-item">
             Member since: {{userProfile.created_at | date}}
