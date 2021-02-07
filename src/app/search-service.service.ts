@@ -14,7 +14,7 @@ export class SearchServiceService {
   constructor(private http:HttpClient) {}
 
   // get profile data
-  public getUsername(searchQuery):Observable<any> {
+  public getUsername(searchQuery:any):Observable<any> {
     let apiUrl = `https://api.github.com/users/${searchQuery}?client_id=${ID}&client_secret=${SECRET}`;
     return this.http.get<any>(apiUrl).pipe(
       retry(1),
@@ -23,7 +23,7 @@ export class SearchServiceService {
   }
 
 
-  public getUserProjects(searchQuery):Observable<any[]>{
+  public getUserProjects(searchQuery:any):Observable<any[]>{
     let apiUrl = `https://api.github.com/users/${searchQuery}/repos?client_id=${ID}&client_secret=${SECRET}`;
     return this.http.get<any[]>(apiUrl).pipe(
       retry(1),
