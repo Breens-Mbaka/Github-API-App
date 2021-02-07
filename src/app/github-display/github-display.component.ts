@@ -9,6 +9,10 @@ export class GithubDisplayComponent implements OnInit {
 
   public userQuery!:string;
 
+  public searchUser() {
+    
+  }
+
   constructor() {}
 
   ngOnInit(): void {
