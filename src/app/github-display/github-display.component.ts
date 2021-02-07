@@ -22,7 +22,17 @@ export class GithubDisplayComponent implements OnInit {
       (error)=>{
         this.errorMessage = error;
       });
+
+    this.searchService.getUserProjects(this.userQuery)
+    .subscribe(
+      (data)=>{
+        this.userProjects = data;
+      },
+      (error)=>{
+        this.errorMessage = error;
+      });
   }
+  
 
   constructor(private searchService: SearchServiceService) {}
 
