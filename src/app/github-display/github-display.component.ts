@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchServiceService } from '../search-service.service';
-
+import { NgxSpinnerModule } from 'ngx-spinner'
 @Component({
   selector: 'app-github-display',
   templateUrl: './github-display.component.html',
@@ -34,7 +34,8 @@ export class GithubDisplayComponent implements OnInit {
   }
   
 
-  constructor(private searchService: SearchServiceService) {}
+  constructor(private searchService: SearchServiceService,
+    private loading:NgxSpinnerModule) {}
 
   ngOnInit(): void {
   }

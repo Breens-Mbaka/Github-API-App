@@ -9,6 +9,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectsComponent } from './projects/projects.component';
 import { FormsModule } from '@angular/forms'
+import { NgxSpinnerModule } from 'ngx-spinner'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms'
     UserProfileComponent,
     GithubDisplayComponent,
     UsernameDataComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    NgxSpinnerModule
   ],
   imports: [
     BrowserModule,
