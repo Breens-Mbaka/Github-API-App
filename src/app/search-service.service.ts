@@ -23,9 +23,9 @@ export class SearchServiceService {
   }
 
 
-  public getUserProjects(searchQuery):Observable<any>{
+  public getUserProjects(searchQuery):Observable<any[]>{
     let apiUrl = `https://api.github.com/users/${searchQuery}/repos?client_id=${ID}&client_secret=${SECRET}`;
-    return this.http.get<any>(apiUrl).pipe(
+    return this.http.get<any[]>(apiUrl).pipe(
       retry(1),
       catchError(this.handleErrors)
     );

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchServiceService } from '../search-service.service';
 
 @Component({
   selector: 'app-github-display',
@@ -8,12 +9,22 @@ import { Component, OnInit } from '@angular/core';
 export class GithubDisplayComponent implements OnInit {
 
   public userQuery!:string;
+  public userProfile:any;
+  public userProjects!:any[];
+  public errorMessage!:string;
 
   public searchUser() {
-    
+    this.searchService.getUsername(this.userQuery)
+    .subscribe(
+      (data)=>{
+        this.userProfile = data;
+      },
+      (error)=>{
+        this.errorMessage = error;
+      });
   }
 
-  constructor() {}
+  constructor(private searchService: SearchServiceService) {}
 
   ngOnInit(): void {
   }
