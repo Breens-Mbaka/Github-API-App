@@ -14,13 +14,33 @@ export class SearchServiceService {
   constructor(private http:HttpClient) {}
 
   // get profile data
-  public getUsername(searchQuery) {
-    let apiUrl = `https://api.github.com/users/${searchQuery}client_id=${ID}&client_secret=${SECRET}`;
-    return this.http.get(apiUrl).pipe(
+  public getUsername(searchQuery):Observable<any> {
+    let apiUrl = `https://api.github.com/users/${searchQuery}?client_id=${ID}&client_secret=${SECRET}`;
+    return this.http.get<any>(apiUrl).pipe(
       retry(1),
+      catchError(this.handleErrors)
     );
   }
 
 
+  public getUserProjects(searchQuery):Observable<any>{
+    let apiUrl = `https://api.github.com/users/${searchQuery}/repos?client_id=${ID}&client_secret=${SECRET}`;
+    return this.http.get<any>(apiUrl).pipe(
+      retry(1),
+      catchError(this.handleErrors)
+    );
+  }
+
+
+  public handleErrors(error:HttpErrorResponse){
+    let errorMessage:string;
+    if(error.error instanceof ErrorEvent){
+      errorMessage = `Message: ${error.error.message}`
+    }
+    else {
+      errorMessage = `Status: ${error.status} Message: ${error.message}`
+    }
+    return throwError(errorMessage)
+  }
  
 }
