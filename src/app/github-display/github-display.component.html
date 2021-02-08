@@ -3,7 +3,7 @@
         <div class="col-6">
             <div class="card">
                 <div class="card-header bg-primary text-white">
-                    Search for Username and Repos
+                    Search for Username and their Repos
                 </div>
                 <div class="card-body">
                     <form class="form-inline" (submit)="searchUser()">
@@ -20,12 +20,12 @@
         <div class="col-6">
             <div class="card">
                 <div class="card-header bg-primary text-white">
-                    Search for User's Github repositories only
+                    Search for Github repositories only
                 </div>
                 <div class="card-body">
                     <form class="form-inline" (submit)="searchRepos()">
                         <div class="form-group">
-                            <input  type="search" class="form-control" name="repos" [(ngModel)]="userQuery2" placeholder="enter user name">
+                            <input  type="search" class="form-control" name="repos" [(ngModel)]="userQuery2" placeholder="enter github repos name">
                         </div>
                         <div>
                             <input type="submit" value="search" class="btn btn-info">

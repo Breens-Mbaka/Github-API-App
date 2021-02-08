@@ -1,0 +1,11 @@
+.card{
+    font-size: 28px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.card-header {
+    text-align: center;
+}
+
+.btn {
+    margin-left: 30px;
+}

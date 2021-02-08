@@ -1,5 +1,10 @@
 <div class="container table-responsive" *ngIf="repositories">
-    <table class="table table-bordered">
+  <div class="card">
+    <div class="card-header bg-primary text-white"> 
+      <h1>Repositories</h1>
+    </div>
+    <div class="card-body">
+      <table class="table table-bordered">
         <thead>
           <tr>
             <th scope="col">Repo name</th>
@@ -10,7 +15,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>{{repositories.items[0].full_name}}</td>
+            <td><a href="">{{repositories.items[0].full_name}}</a></td>
             <td>{{repositories.items[0].description}}</td>
             <td>{{repositories.items[0].forks}}</td>
             <td>{{repositories.items[0].watchers}}</td>
@@ -191,4 +196,6 @@
           </tr>
         </tbody>
       </table>
+    </div>
+  </div>
 </div>
