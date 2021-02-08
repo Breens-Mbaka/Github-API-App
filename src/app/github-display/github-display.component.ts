@@ -11,7 +11,7 @@ export class GithubDisplayComponent implements OnInit {
   public userQuery!:string;
   public userQuery2!:string;
   public userProfile:any;
-  public repositories:any;
+  public repositories!:any;
   public userProjects!:any[];
   public errorMessage!:string;
 
@@ -41,6 +41,8 @@ export class GithubDisplayComponent implements OnInit {
     .subscribe(
       (data)=>{
         this.repositories = data;
+        //testing which data is returned
+        console.log(data.items)
       },
       (error)=>{
         this.errorMessage = error;

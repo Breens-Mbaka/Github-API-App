@@ -4,7 +4,7 @@
     </div>
     <div class="card-body">
         <ul class="list-group">
-            <li *ngFor="let project of userProjects" class="list-group-item d-flex justify content between">
+            <li *ngFor="let project of userProjects" class="list-group-item d-flex justify-content-between">
                 <a [href]="project.html_url" target="_blank" class="text-primary">{{project.name}}</a>
                 <span class="badge badge-success">{{project.stargazers_count}}stars</span>
                 <span class="badge badge-info">{{project.watchers_count}}stars</span>
